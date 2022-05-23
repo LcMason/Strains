@@ -8,13 +8,15 @@ function Container() {
     useEffect(() => {
         fetch("http://localhost:3004/strains")
             .then((r) => r.json())
-            .then((data) => setStrains(data));
+            .then((strains) => setStrains(strains));
     }, []);
-    console.log(strains)
+    
 
    
 
-
+    // const strainCards = strains.map((strain) => {
+    //     return <Card strain={strain} />
+    // }
 
 
   return (
