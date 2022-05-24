@@ -7,13 +7,13 @@ function Container() {
 
 
     useEffect(() => {
-      fetch("http://localhost:3004/strains")
+      fetch("http://localhost:3000/strains")
         .then((r) => r.json())
         .then((strains) => setStrains(strains));
     }, []);
     
     const createStrain =(strainObj) => {
-      fetch("http://localhost:3004/strains", {
+      fetch("http://localhost:3000/strains", {
         method: "POST",
         headers: {
           "Content-type": "application/json",
@@ -34,8 +34,8 @@ function Container() {
 
   return (
     <div>
-       {strainCards}
        <Form createStrain={createStrain} />
+       {strainCards}
     </div>
   )
 }
