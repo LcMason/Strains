@@ -11,8 +11,11 @@ function Container() {
         .then((r) => r.json())
         .then((strains) => setStrains(strains));
     }, []);
+
+
     
-    const createStrain =(strainObj) => {
+    
+    const createStrain = (strainObj) => {
       fetch("http://localhost:3000/strains", {
         method: "POST",
         headers: {

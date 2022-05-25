@@ -24,7 +24,7 @@
       "id": 2,
       "strain": "Alice in Wonderland",
       "species": "sativa",
-      "image": "https://images.leafly.com/flower-images/defaults/generic/strain-34.png?auto=compress,format&w=295&dpr=2", 
+      "image": "https://images.leafly.com/flower-images/defaults/generic/strain-34.png?auto=compress,format&w=295&dpr=2",
       "top_effect": "creative",
       "flavor_and_aroma": "ammonia",
       "THC": "16%",
@@ -58,6 +58,69 @@
       "top_effect": "energizing",
       "flavor_and_aroma": "ammonia",
       "THC": "19%",
-      "rating": "4.2"
+      "rating": "4.2",
+      "diagnosis": "Cancer"
     }
-]}
+    
+   
+  ],
+
+  "diagnosis": [
+    {
+      "id": 1,
+      "name": "Insomnia"
+    },
+    {
+      "id": 2,
+      "name": "Inflammation"
+    },
+    {
+      "id": 3,
+      "name": "Depression"
+    },
+    {
+      "id": 4,
+      "name": "ADHD"
+    },
+    {
+      "id": 5,
+      "name": "Multiple sclerosis"
+    },
+    {
+      "id": 6,
+      "name": "Cancer"
+    },
+    {
+      "id": 7,
+      "name": "Anxiety"
+    },
+    {
+      "id": 8,
+      "name": "Glaucoma"
+    },
+    {
+      "id": 9,
+      "name": "Seizure"
+    },
+    {
+      "id": 10,
+      "name": "Muscle spasms"
+    },
+    {
+      "id": 11,
+      "name": "ALS"
+    },
+    {
+      "id": 12,
+      "name": "HIV"
+    },
+    {
+      "id": 13,
+      "name": "Crohn's disease"
+    },
+    {
+      "id": 14,
+      "name": "Alzheimer's disease"
+    }
+  ]
+}
