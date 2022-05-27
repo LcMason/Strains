@@ -1,65 +1,73 @@
 {
   "strains": [
     {
-      "id": 0,
+      "id": 1,
       "strain": "Acapulco Gold",
       "species": "sativa",
       "image": "https://images.leafly.com/flower-images/acapulco.jpg?auto=compress,format&w=350&dpr=2",
+      "manages": "Insomnia, Depression, Anxiety",
       "top_effect": "energizing",
       "flavor_and_aroma": "coffee, woody, chestnut",
       "THC": "18%",
       "rating": "4.5 "
     },
     {
-      "id": 1,
+      "id": 2,
       "strain": "Alaskan Thunder Fuck",
       "species": "sativa",
       "image": "https://images.leafly.com/flower-images/defaults/generic/strain-11.png?auto=compress,format&w=350&dpr=2",
-      "top_effect": "energizing",
+      "manages": "Inflammation, Muscle spasms",
+      "top_effect": "calming",
       "flavor_and_aroma": "menthol",
       "THC": "16%",
       "rating": "4.3"
     },
     {
-      "id": 2,
+      "id": 3,
       "strain": "Alice in Wonderland",
       "species": "sativa",
       "image": "https://images.leafly.com/flower-images/defaults/generic/strain-34.png?auto=compress,format&w=295&dpr=2",
+      "manages": "Alzheimer's disease, Chron's disease, Anxiety",
       "top_effect": "creative",
       "flavor_and_aroma": "ammonia",
       "THC": "16%",
       "rating": "4.5"
     },
     {
-      "id": 3,
+      "id": 4,
       "strain": "Allen Wrench",
       "species": "sativa",
       "image": "https://images.leafly.com/flower-images/allen-wrench.jpg?auto=compress,format&w=350&dpr=2",
+      "manages": "Glaucoma, ALS, Appetite loss",
       "top_effect": "energizing",
       "flavor_and_aroma": "citrus",
       "THC": "18%",
       "rating": "4.3"
     },
     {
-      "id": 4,
+      "id": 5,
       "strain": "Aloha",
       "species": "sativa",
       "image": "https://images.leafly.com/flower-images/defaults/long-fluffy-wispy/strain-11.png?auto=compress,format&w=350&dpr=2",
-      "top_effect": "energizing",
+      "manages": "ADHD, Seizures, Depression",
+      "top_effect": "focus",
       "flavor_and_aroma": "tropical",
       "THC": "16%",
       "rating": "3.9"
     },
     {
-      "id": 5,
+      "id": 6,
       "strain": "Amnesia",
       "species": "sativa",
       "image": "https://images.leafly.com/flower-images/AMNESIA-026.jpg?auto=compress,format&w=350&dpr=2",
+      "manages": "Cancer, HIV, Glaucoma",
       "top_effect": "energizing",
       "flavor_and_aroma": "ammonia",
       "THC": "19%",
-      "rating": "4.2",
-      "diagnosis": "Cancer"
+      "rating": "4.2"
+      
+      
+    
     }
     
    
@@ -69,6 +77,7 @@
     {
       "id": 1,
       "name": "Insomnia"
+    
     },
     {
       "id": 2,
@@ -121,6 +130,11 @@
     {
       "id": 14,
       "name": "Alzheimer's disease"
+    },
+    {
+      "id": 15,
+      "name": "Appetite loss"
     }
   ]
 }
+

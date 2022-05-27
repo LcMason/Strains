@@ -1,7 +1,10 @@
 // import logo from './logo.svg';
 import './App.css';
-import Container from './components/Container';
 import Header from './components/Header';
+import Container from './components/Container';
+// import Filter from './components/Filter';
+// import Card from './components/Card';
+
 // import Select from 'react-select' 
 
 // const diagnoses = [{
@@ -29,6 +32,8 @@ function App() {
     <div>
       <Header />
       <Container />
+     
+      {/* <Card /> */}
       
      </div>
   )}
