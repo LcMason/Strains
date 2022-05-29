@@ -15,12 +15,25 @@ function Container() {
     }, []);
       
 
-//fetching the diagnosis in db.json
-    // useEffect(() => {
-    //   fetch("http://localhost:3000/diagnosis")
-    //     .then((r) => r.json())
-    //     .then((diagnosis) => setDiagnosis(diagnosis))
-    // })
+  //fetching the diagnosis in db.json
+      // useEffect(() => {
+      //   fetch("http://localhost:3000/diagnosis")
+      //     .then((r) => r.json())
+      //     .then((diagnosis) => setDiagnosis(diagnosis))
+      // })
+
+
+      // [{}, {}, {} ] => [{}, {}] => [<Card />, <Card />]
+
+      strains.filter((strain) => {
+        //if (strain.manages === Insomnia) {  //if strain.manages === any diagnosis within strain.manages, return that specific strian
+          // return strain.manages  
+        // }
+      })
+
+
+
+
 
 
     

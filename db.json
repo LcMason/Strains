@@ -65,19 +65,12 @@
       "flavor_and_aroma": "ammonia",
       "THC": "19%",
       "rating": "4.2"
-      
-      
-    
     }
-    
-   
   ],
-
   "diagnosis": [
     {
       "id": 1,
       "name": "Insomnia"
-    
     },
     {
       "id": 2,
@@ -137,4 +130,3 @@
     }
   ]
 }
-

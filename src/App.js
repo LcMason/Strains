@@ -32,9 +32,7 @@ function App() {
     <div>
       <Header />
       <Container />
-     
-      {/* <Card /> */}
-      
+      {/* <Card /> */} 
      </div>
   )}
 

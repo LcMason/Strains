@@ -3,7 +3,7 @@ import React, {useState} from 'react'
 
 function Card({strain}) {
     // const {id, species, image, top_effect, flavor_and_aroma, THC, rating } = strain
-       const [isShowing, setIsShowing] = useState(true)
+       const [isShowing, setIsShowing] = useState(false)
     
 
       console.log(strain)
