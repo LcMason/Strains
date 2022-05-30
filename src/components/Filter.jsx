@@ -1,3 +1,7 @@
+import React from "react";
+
+
+
 function Filter() {
 // Add a check box
     return (
@@ -8,7 +12,7 @@ function Filter() {
 				// onChange={handleChangeSortBy}
 				// value={sortBy} */}
                 
-                <h1>What is your diagnoses?</h1>
+                {/* <h1>What is your diagnoses?</h1> */}
 				<option value="Insomnia">Insomnia</option>
 				<option value="Inflammation">Inflammation</option>
 			    <option value="Depression">Depression</option>

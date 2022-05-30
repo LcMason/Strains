@@ -2,10 +2,12 @@ import React, {useEffect, useState} from 'react'
 import Card from './Card';
 import Form from './Form';
 import Filter from './Filter';
+import Search from './Search'
 
 function Container() {
     const [strains, setStrains] = useState([]);
-    const [diagnosis, setDiagnosis] = useState([])
+    // const [diagnosis, setDiagnosis] = useState([])
+    const [searchTerm, setSearchTerm] = useState("")
 
 
     useEffect(() => {
@@ -52,16 +54,22 @@ function Container() {
 
    
 
-    const strainCards = strains.map((strain) => {
-        return <Card strain={strain} key={strain.id} />
-    })
+    // const strainCards = strains.map((strain) => {
+    //     return <Card strain={strain} key={strain.id} />
+    // })
 
+    //pass displayedStrains via props to Search and create a search for diagnosis to populate strain
+    const displayedStrains = strains.filter((strain) => {
+      return strain.manages.toLowerCase().includes(searchTerm.toLowerCase());
+    })
 
   return (
     <div>
        <Form createStrain={createStrain} />
+       <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} displayedStrains={displayedStrains} />
        <Filter />
-       {strainCards}
+       {displayedStrains.map((strain) => <Card strain={strain} key={strain.id} />)} 
+      {/* //  {strainCards} */}
     </div>
   )
 }
