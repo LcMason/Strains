@@ -20,26 +20,6 @@ function Form({createStrain}) {
     }
 
 
-
-// const diagnoses = [{
-//   label:'Insomnia', value: 'Insomnia',
-//   label:'Inflammation', value: 'Inflammation',
-//   label:'Depression', value: 'Depression',
-//   label:'ADHD', value: 'ADHD',
-//   label:'Multiple sclerosis', value: 'Multiple sclerosis',
-//   label:'Cancer', value: 'Cancer',
-//   label:'Anxiety', value: 'Anxiety',
-//   label:'Depression', value: 'Depression',
-//   label:'Glaucoma', value: 'Glaucoma',
-//   label:'Seizures', value: 'Seizures',
-//   label:'Muscle spasms', value: 'Muscle spasms',
-//   label:'ALS', value: 'ALS',
-//   label:'HIV', value: 'HIV',
-//   label:'Crohn's disease', value: 'Crohn's disease',
-//   label:'Alzheimer's disease', value: 'Alzheimer's disease',
-
-// }]
-
 const handleChange = (e) => {
   const updatedFormData = {...strainData , [e.target.name]: e.target.value}
   setStrainData(updatedFormData)
@@ -49,6 +29,7 @@ const handleChange = (e) => {
   return (
     <div className="diagnoses">
         <h1>Select Your Strain</h1>
+        {/* <br></br> */}
         <form onSubmit={handleSubmit}>
             {/* <input type="text" name="name" placeholder="" value={strainData.name}/> */}
             <input type="text" name="strain" placeholder="strain" value={strainData.strain} onChange={handleChange} />
@@ -66,3 +47,5 @@ const handleChange = (e) => {
 }
 
 export default Form;
+
+//add a default image to the form. Also, comment the name back in on line 34

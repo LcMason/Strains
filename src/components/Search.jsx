@@ -1,10 +1,10 @@
 import React from "react";
 
 
-function Search({searchTerm, setSearchTerm, displayedStrains}) {
+function Search({searchTerm, setSearchTerm, filteredStrainsArr}) {
 
 
-    
+
 
 
 
@@ -12,12 +12,13 @@ function Search({searchTerm, setSearchTerm, displayedStrains}) {
 
     return (
         <div>
-            <label htmlFor="search">Search Diagnosis:</label>
+            <label htmlFor="search">Wellness Check: </label>
       <input
         type="text"
         id="search"
-        placeholder="Type a name to search..."
+        placeholder="Search Diagnosis..."
         onChange={(e) => setSearchTerm(e.target.value)}
+        //how is onChange there an onChange callback function with no onChange function written in Search componenet
       />
         </div>
     )
