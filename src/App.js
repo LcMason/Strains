@@ -4,13 +4,13 @@ import React from 'react'
 // import ReactDOM from 'react-dom/client';
 import Navbar from "./components/Navbar"
 import Search from "./components/Search"
-import Home from "./components/Home"
+// import Home from "./components/Home"
 import Header from "./components/Header";
 import Container from "./components/Container";
 import Form from "./components/Form"
 import About from "./components/About"
 // import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import {BrowserRouter, Route, Switch} from 'react-router-dom'
+import {Route, Switch} from 'react-router-dom'
 // import reactRouterDom from 'react-router-dom';
 // import Card from './components/Card';
 
@@ -41,13 +41,11 @@ function App() {
 
   return (
     <div>
+      <Header />
       <Navbar />
       <Switch>
         <Route path="/form">
           <Form />
-        </Route> 
-        <Route path="/search">
-          <Search />
         </Route> 
         <Route path="/about">
           <About />

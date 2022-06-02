@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-function Form({createStrain}) {
+function Form() {
     const [strainData, setStrainData] = useState({
         name: "",
         strain: "",
@@ -11,8 +11,22 @@ function Form({createStrain}) {
         THC: "",
         rating: ""
     })
+    const [strains, setStrains] = useState([]);
 
     // const [sortBy, setSortBy] = useState("")
+
+    const createStrain = (strainObj) => {
+      fetch("http://localhost:3000/strains", {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify(strainObj)
+      })
+      .then((r) => r.json())
+      .then((newStrain) =>setStrains(previousStrains => [...previousStrains, newStrain]))
+    }
 
     const handleSubmit =(e) => {
       e.preventDefault();

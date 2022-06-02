@@ -33,22 +33,19 @@ function Container() {
         // }
       // })
 
-    const createStrain = (strainObj) => {
-      fetch("http://localhost:3000/strains", {
-        method: "POST",
-        headers: {
-          "Content-type": "application/json",
-          "Accept": "application/json"
-        },
-        body: JSON.stringify(strainObj)
-      })
-      .then((r) => r.json())
-      .then((newStrain) =>setStrains(previousStrains => [...previousStrains, newStrain]))
-    }
+    // const createStrain = (strainObj) => {
+    //   fetch("http://localhost:3000/strains", {
+    //     method: "POST",
+    //     headers: {
+    //       "Content-type": "application/json",
+    //       "Accept": "application/json"
+    //     },
+    //     body: JSON.stringify(strainObj)
+    //   })
+    //   .then((r) => r.json())
+    //   .then((newStrain) =>setStrains(previousStrains => [...previousStrains, newStrain]))
+    // }
 
-    // const strainCards = strains.map((strain) => {
-    //     return <Card strain={strain} key={strain.id} />
-    // })
 
     //pass displayedStrains via props to Search and create a search for diagnosis to populate strain
     const filteredStrainsArr = strains.filter((strain) => {
@@ -57,7 +54,7 @@ function Container() {
 
   return (
     <div>
-       <Form createStrain={createStrain} />
+       {/* <Form createStrain={createStrain} /> */}
       <br></br>
       <br></br>
        <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} filteredStrainsArr={filteredStrainsArr} />
