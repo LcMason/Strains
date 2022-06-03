@@ -3,7 +3,7 @@ import './App.css';
 import React from 'react'
 // import ReactDOM from 'react-dom/client';
 import Navbar from "./components/Navbar"
-import Search from "./components/Search"
+// import Search from "./components/Search"
 // import Home from "./components/Home"
 import Header from "./components/Header";
 import Container from "./components/Container";
@@ -14,7 +14,6 @@ import {Route, Switch} from 'react-router-dom'
 // import reactRouterDom from 'react-router-dom';
 // import Card from './components/Card';
 
-// import Select from 'react-select' 
 
 // const diagnoses = [{
 //   label:'Insomnia', value: 'Insomnia',

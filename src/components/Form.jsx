@@ -15,22 +15,23 @@ function Form() {
 
     // const [sortBy, setSortBy] = useState("")
 
-    const createStrain = (strainObj) => {
+    
+    const handleSubmit =(e) => {
+      e.preventDefault();
+      const placeholder = "https://images.leafly.com/flower-images/blue-dream.png?auto=compress,format&w=350&dpr=2"
+      const newStrainImage = strainData.image === "" ? placeholder : strainData.image
+      const updatedStrainObj = {...strainData, newStrainImage}
+      setStrainData(updatedStrainObj)
       fetch("http://localhost:3000/strains", {
         method: "POST",
         headers: {
           "Content-type": "application/json",
           "Accept": "application/json"
         },
-        body: JSON.stringify(strainObj)
+        body: JSON.stringify(strainData)
       })
       .then((r) => r.json())
       .then((newStrain) =>setStrains(previousStrains => [...previousStrains, newStrain]))
-    }
-
-    const handleSubmit =(e) => {
-      e.preventDefault();
-      createStrain(strainData);
     }
 
 
@@ -45,10 +46,10 @@ const handleChange = (e) => {
         <h1>Select Your Strain</h1>
         {/* <br></br> */}
         <form onSubmit={handleSubmit}>
-            {/* <input type="text" name="name" placeholder="" value={strainData.name}/> */}
+            <input type="text" name="name" placeholder="" value={strainData.name}/>
             <input type="text" name="strain" placeholder="strain" value={strainData.strain} onChange={handleChange} />
             <input type="text" name="species" placeholder="species" value={strainData.species} onChange={handleChange} />
-            {/* <input type="text" name="image" placeholder="" value={strainData.image} /> */}
+            <input type="text" name="image" placeholder="" value={strainData.image} />
             <input type="text" name="top_effect" placeholder="effect" value={strainData.top_effect} onChange={handleChange} />
             <input type="text" name="flavor_and_aroma" placeholder="flavor" value={strainData.flavor_and_aroma} onChange={handleChange} />
             <input type="number" name="THC" placeholder="THC%" value={strainData.THC} onChange={handleChange} />
