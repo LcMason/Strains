@@ -40,8 +40,8 @@ function App() {
 
   return (
     <div>
-      <Header />
       <Navbar />
+      <Header />
       <Switch>
         <Route path="/form">
           <Form />

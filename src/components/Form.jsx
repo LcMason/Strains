@@ -13,9 +13,8 @@ function Form() {
     })
     const [strains, setStrains] = useState([]);
 
-    // const [sortBy, setSortBy] = useState("")
-
     
+  
     const handleSubmit =(e) => {
       e.preventDefault();
       const placeholder = "https://images.leafly.com/flower-images/blue-dream.png?auto=compress,format&w=350&dpr=2"

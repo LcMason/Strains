@@ -9,7 +9,6 @@ function Search({searchTerm, setSearchTerm, filteredStrainsArr}) {
 
 
 
-
     return (
         <div>
             <label htmlFor="search">Wellness Check: </label>
