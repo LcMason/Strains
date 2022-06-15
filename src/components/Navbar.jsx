@@ -1,22 +1,26 @@
-import {Link} from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 
 function Navbar() {
     
 
-
-//img src vs href
     
     return (
     <nav>
-         <div id="navbar" className="nav-wrapper">
-         {/* <img src="https://c.tenor.com/YMbY9m9-Q6YAAAAC/amcs-amcs2020.gif" alt="THC Pills"></img> */}
-            <a href="https://c.tenor.com/YMbY9m9-Q6YAAAAC/amcs-amcs2020.gif" class="brand-logo center">Logo</a>
-            <ul className="left hide-on-med-and-down">
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/form">Form</Link></li>
-            <li><Link to="/about">About</Link></li>
+         <div id="navbar" className="linkStyles">
+            <ul className="list-unstyled">
+                <li><NavLink to="/">Home</NavLink></li>
+                <li><NavLink to="/form">Form</NavLink></li>
+                <li><NavLink to="/about">About</NavLink></li>
             </ul>
-        </div>
+            <div>
+                {/* <img className="image" src="https://c.tenor.com/YMbY9m9-Q6YAAAAC/amcs-amcs2020.gif" alt="Medicinal Healing"></img> */}
+                {/* <img className="image" src="https://c.tenor.com/YMbY9m9-Q6YAAAAC/amcs-amcs2020.gif" alt='medicinal flower'></img> */}
+               
+                
+            </div>
+         </div>
+       
+
     </nav>
   )   
 }

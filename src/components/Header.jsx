@@ -6,7 +6,8 @@ function Header() {
       <header>
       <h1>
         Medicinal Wellness Center
-        <img src="https://c.tenor.com/YMbY9m9-Q6YAAAAC/amcs-amcs2020.gif" alt="THC Pills"></img>
+        <hr></hr>
+        {/* <img src="" alt="Medicinal Healing"></img> */}
       </h1>
     </header>
   </div>

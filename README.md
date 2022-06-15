@@ -68,3 +68,15 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+{/* <input type="text" name="name" placeholder="" value={strainData.name}/>
+            <input type="text" name="strain" placeholder="strain" value={strainData.strain} onChange={handleChange} />
+            <input type="text" name="species" placeholder="species" value={strainData.species} onChange={handleChange} />
+            <input type="text" name="image" placeholder="" value={strainData.image} />
+            <input type="text" name="top_effect" placeholder="effect" value={strainData.top_effect} onChange={handleChange} />
+            <input type="text" name="flavor_and_aroma" placeholder="flavor" value={strainData.flavor_and_aroma} onChange={handleChange} />
+            <input type="number" name="THC" placeholder="THC%" value={strainData.THC} onChange={handleChange} />
+            <input type="text" name="rating" placeholder="rating" value={strainData.rating} onChange={handleChange} />
+            <button type="submit"> Add Strain</button> */}

@@ -14,6 +14,7 @@ function Container() {
     }, []);
       
     const filteredStrainsArr = strains.filter((strain) => {
+      console.log(strain.manages)
       return strain.manages.toLowerCase().includes(searchTerm.toLowerCase());
     })
 

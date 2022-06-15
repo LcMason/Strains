@@ -6,6 +6,7 @@ function Form() {
         strain: "",
         species: "",
         image: "",
+        manages: "",
         top_effect: "",
         flavor_and_aroma: "",
         THC: "",
@@ -13,7 +14,7 @@ function Form() {
     })
     const [strains, setStrains] = useState([]);
 
-    
+    // const [currentSearch, setCurrentSearch] = useState([])
   
     const handleSubmit =(e) => {
       e.preventDefault();
@@ -30,8 +31,17 @@ function Form() {
         body: JSON.stringify(strainData)
       })
       .then((r) => r.json())
-      .then((newStrain) =>setStrains(previousStrains => [...previousStrains, newStrain]))
+      .then((newStrain) => {
+        setStrains(previousStrains => [...previousStrains, newStrain])
+        //redirect History Hook
+      })
     }
+
+    // const handleSubmit = (e) => {
+    //   e.preventDefault();
+    //   onSubmit(newStrain);
+    // }
+    // }
 
 
 const handleChange = (e) => {
@@ -41,19 +51,56 @@ const handleChange = (e) => {
 
 
   return (
-    <div className="diagnoses">
+    <div>
         <h1>Select Your Strain</h1>
-        {/* <br></br> */}
-        <form onSubmit={handleSubmit}>
-            <input type="text" name="name" placeholder="" value={strainData.name}/>
-            <input type="text" name="strain" placeholder="strain" value={strainData.strain} onChange={handleChange} />
-            <input type="text" name="species" placeholder="species" value={strainData.species} onChange={handleChange} />
-            <input type="text" name="image" placeholder="" value={strainData.image} />
-            <input type="text" name="top_effect" placeholder="effect" value={strainData.top_effect} onChange={handleChange} />
-            <input type="text" name="flavor_and_aroma" placeholder="flavor" value={strainData.flavor_and_aroma} onChange={handleChange} />
-            <input type="number" name="THC" placeholder="THC%" value={strainData.THC} onChange={handleChange} />
-            <input type="text" name="rating" placeholder="rating" value={strainData.rating} onChange={handleChange} />
-            <button type="submit"> Add Strain</button>
+        <form className="my-form" onSubmit={handleSubmit}>
+        
+            <div class="form-group">
+              <label> Name: </label>
+              <input type="text" name="name" value={strainData.name} onChange={handleChange}></input>
+
+            </div>
+            <div class="form-group">
+              <label> Strain: </label>
+              <input type="text" name="strain" value={strainData.strain} onChange={handleChange}></input>
+              
+            </div>
+            <div class="form-group">
+              <label> Species: </label>
+              <input type="text" name="species" value={strainData.species} onChange={handleChange}></input>
+              
+            </div>
+            <div className="form-group">
+              <label> Image: </label>
+              <input type="text" name="image" placeholder="" value={strainData.image} onChange={handleChange}></input>
+              
+            </div>
+            <div className="form-group">
+              <label> Manges: </label>
+              <input type="text" name="manages" placeholder="" value={strainData.manages} onChange={handleChange}></input>
+              
+            </div>
+            <div className="form-group">
+              <label> Effect: </label>
+              <input type="text" name="top_effect" value={strainData.top_effect} onChange={handleChange}></input>
+              
+            </div>
+            <div className="form-group">
+              <label> Flavor & Aroma: </label>
+              <input type="text" name="flavor_and_aroma" value={strainData.flavor_and_aroma} onChange={handleChange}></input>
+              
+            </div>
+            <div className="form-group">
+              <label> THC: </label>
+              <input type="text" name="THC" value={strainData.THC} onChange={handleChange}></input>
+              
+            </div>
+            <div className="form-group">
+              <label> Rating: </label>
+              <input type="text" name="rating" value={strainData.rating} onChange={handleChange}></input>
+              
+            </div>
+            <button className="button" type="submit"> Submit </button>
         </form>
         
      </div>
@@ -61,5 +108,3 @@ const handleChange = (e) => {
 }
 
 export default Form;
-
-//add a default image to the form. Also, comment the name back in on line 34
