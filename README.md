@@ -80,3 +80,22 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
             <input type="number" name="THC" placeholder="THC%" value={strainData.THC} onChange={handleChange} />
             <input type="text" name="rating" placeholder="rating" value={strainData.rating} onChange={handleChange} />
             <button type="submit"> Add Strain</button> */}
+
+           in App.js // const diagnoses = [{
+//   label:'Insomnia', value: 'Insomnia',
+//   label:'Inflammation', value: 'Inflammation',
+//   label:'Depression', value: 'Depression',
+//   label:'ADHD', value: 'ADHD',
+//   label:'Multiple sclerosis', value: 'Multiple sclerosis',
+//   label:'Cancer', value: 'Cancer',
+//   label:'Anxiety', value: 'Anxiety',
+//   label:'Depression', value: 'Depression',
+//   label:'Glaucoma', value: 'Glaucoma',
+//   label:'Seizures', value: 'Seizures',
+//   label:'Muscle spasms', value: 'Muscle spasms',
+//   label:'ALS', value: 'ALS',
+//   label:'HIV', value: 'HIV',
+//   label:'Crohn\'s disease', value: 'Crohn\'s disease',
+//   label:'Alzheimer\'s disease', value: 'Alzheimer\'s disease',
+
+// }]

@@ -12,11 +12,8 @@ function Container() {
         .then((r) => r.json())
         .then((strains) => setStrains(strains));
     }, []);
-      
-    const filteredStrainsArr = strains.filter((strain) => {
-      console.log(strain.manages)
-      return strain.manages.toLowerCase().includes(searchTerm.toLowerCase());
-    })
+  
+      const filteredStrainsArr = strains.filter((strain) => strain.manages.toLowerCase().includes(searchTerm.toLowerCase()))
 
   return (
     <div>
@@ -27,3 +24,4 @@ function Container() {
 }
 
 export default Container;
+

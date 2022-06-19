@@ -1,7 +1,8 @@
 import React, {useState} from 'react'
 
-function Form() {
-    const [strainData, setStrainData] = useState({
+function Form({ handleSubmit }) {
+ 
+      const [strainData, setStrainData] = useState({
         name: "",
         strain: "",
         species: "",
@@ -12,60 +13,38 @@ function Form() {
         THC: "",
         rating: ""
     })
-    const [strains, setStrains] = useState([]);
-
-    // const [currentSearch, setCurrentSearch] = useState([])
-  
-    const handleSubmit =(e) => {
-      e.preventDefault();
-      const placeholder = "https://images.leafly.com/flower-images/blue-dream.png?auto=compress,format&w=350&dpr=2"
-      const newStrainImage = strainData.image === "" ? placeholder : strainData.image
-      const updatedStrainObj = {...strainData, newStrainImage}
-      setStrainData(updatedStrainObj)
-      fetch("http://localhost:3000/strains", {
-        method: "POST",
-        headers: {
-          "Content-type": "application/json",
-          "Accept": "application/json"
-        },
-        body: JSON.stringify(strainData)
-      })
-      .then((r) => r.json())
-      .then((newStrain) => {
-        setStrains(previousStrains => [...previousStrains, newStrain])
-        //redirect History Hook
-      })
+    
+    const handleChange = (e) => {
+      const updatedFormData = {...strainData , [e.target.name]: e.target.value}
+      setStrainData(updatedFormData)
     }
-
-    // const handleSubmit = (e) => {
-    //   e.preventDefault();
-    //   onSubmit(newStrain);
-    // }
-    // }
-
-
-const handleChange = (e) => {
-  const updatedFormData = {...strainData , [e.target.name]: e.target.value}
-  setStrainData(updatedFormData)
-}
-
+    
+    const managesPlaceholder = () => {
+      if (strainData.manages === "") {
+        return "placeholder" 
+      } else {
+        return strainData.manages
+      }
+        
+    }
+        
 
   return (
     <div>
         <h1>Select Your Strain</h1>
         <form className="my-form" onSubmit={handleSubmit}>
         
-            <div class="form-group">
+            <div className="form-group">
               <label> Name: </label>
               <input type="text" name="name" value={strainData.name} onChange={handleChange}></input>
 
             </div>
-            <div class="form-group">
+            <div className="form-group">
               <label> Strain: </label>
               <input type="text" name="strain" value={strainData.strain} onChange={handleChange}></input>
               
             </div>
-            <div class="form-group">
+            <div className="form-group">
               <label> Species: </label>
               <input type="text" name="species" value={strainData.species} onChange={handleChange}></input>
               
@@ -77,8 +56,8 @@ const handleChange = (e) => {
             </div>
             <div className="form-group">
               <label> Manges: </label>
-              <input type="text" name="manages" placeholder="" value={strainData.manages} onChange={handleChange}></input>
-              
+              <input type="text" name="manages" placeholder="" value={managesPlaceholder} onChange={handleChange}></input>
+             {/* if strainData.mamges.length = 0 ? placeholder : strainData.manages */}
             </div>
             <div className="form-group">
               <label> Effect: </label>
@@ -108,3 +87,58 @@ const handleChange = (e) => {
 }
 
 export default Form;
+
+
+
+ // const [strainData, setStrainData] = useState({ line 4
+    //     name: "",
+    //     strain: "",
+    //     species: "",
+    //     image: "",
+    //     manages: "",
+    //     top_effect: "",
+    //     flavor_and_aroma: "",
+    //     THC: "",
+    //     rating: ""
+    // })
+
+    // const newStrain = (handleSubmit) => { line 16
+
+
+
+ // const [strains, setStrains] = useState([]);
+
+    // const [currentSearch, setCurrentSearch] = useState([])
+  
+    // const handleSubmit =(e) => {
+    //   e.preventDefault();
+    //   const placeholder = "https://images.leafly.com/flower-images/blue-dream.png?auto=compress,format&w=350&dpr=2"
+    //   const newStrainImage = strainData.image === "" ? placeholder : strainData.image
+    //   const updatedStrainObj = {...strainData, newStrainImage}
+    //   setStrainData(updatedStrainObj)
+    //   fetch("http://localhost:3000/strains", {
+    //     method: "POST",
+    //     headers: {
+    //       "Content-type": "application/json",
+    //       "Accept": "application/json"
+    //     },
+    //     body: JSON.stringify(strainData)
+    //   })
+    //   .then((r) => r.json())
+    //   .then((newStrain) => {
+    //     setStrains(previousStrains => [...previousStrains, newStrain])
+        //redirect History Hook
+      // })
+    
+
+    // const handleSubmit = (e) => {
+    //   e.preventDefault();
+    //   onSubmit(newStrain);
+    // }
+    // }
+
+
+// const handleChange = (e) => {
+//   const updatedFormData = {...strainData , [e.target.name]: e.target.value}
+//   setStrainData(updatedFormData)
+// }
