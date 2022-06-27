@@ -1,8 +1,10 @@
-import React, {useState} from 'react'
+import React, {useState} from 'react' 
+// import React, {useNavigate} from 'react-router-dom'
 
-function Form({ handleSubmit }) {
+function Form() {
  
       const [strainData, setStrainData] = useState({
+        id: "",
         name: "",
         strain: "",
         species: "",
@@ -10,24 +12,61 @@ function Form({ handleSubmit }) {
         manages: "",
         top_effect: "",
         flavor_and_aroma: "",
-        THC: "",
+        thc: "",
         rating: ""
     })
     
     const handleChange = (e) => {
       const updatedFormData = {...strainData , [e.target.name]: e.target.value}
+      console.log(updatedFormData)
       setStrainData(updatedFormData)
     }
     
-    const managesPlaceholder = () => {
-      if (strainData.manages === "") {
-        return "placeholder" 
-      } else {
-        return strainData.manages
-      }
+    // const managesPlaceholder = () => {
+    //   if (strainData.manages === "") {
+    //     return "placeholder" 
+    //   } else {
+    //     return strainData.manages
+    //   }
         
+    // }
+    const [strains, setStrains] = useState([]);
+
+    const handleSubmit =(e) => {
+      e.preventDefault();
+      const placeholder = "https://images.leafly.com/flower-images/blue-dream.png?auto=compress,format&w=350&dpr=2"
+      const image = strainData.image === "" ? placeholder : strainData.image
+      const updatedStrainObj = {...strainData, image}
+      // setStrainData(updatedStrainObj)
+      fetch("http://localhost:3000/strains", {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify(updatedStrainObj)
+      })
+      .then((r) => r.json())
+      .then((newStrain) => {
+        setStrains ([...strains, newStrain]);
+        clearForm()
+      })
     }
-        
+
+    function clearForm() {
+      setStrainData({
+        name: "",
+        strain: "",
+        species: "",
+        image: "",
+        manages: "",
+        top_effect: "",
+        flavor_and_aroma: "",
+        thc: "",
+        rating: ""
+    });
+    }
+
 
   return (
     <div>
@@ -51,12 +90,12 @@ function Form({ handleSubmit }) {
             </div>
             <div className="form-group">
               <label> Image: </label>
-              <input type="text" name="image" placeholder="" value={strainData.image} onChange={handleChange}></input>
+              <input type="text" name="image" placeholder={strainData.image} value={strainData.image} onChange={handleChange}></input>
               
             </div>
             <div className="form-group">
               <label> Manges: </label>
-              <input type="text" name="manages" placeholder="" value={managesPlaceholder} onChange={handleChange}></input>
+              <input type="text" name="manages" placeholder="" value={strainData.manages} onChange={handleChange}></input>
              {/* if strainData.mamges.length = 0 ? placeholder : strainData.manages */}
             </div>
             <div className="form-group">
@@ -71,7 +110,7 @@ function Form({ handleSubmit }) {
             </div>
             <div className="form-group">
               <label> THC: </label>
-              <input type="text" name="THC" value={strainData.THC} onChange={handleChange}></input>
+              <input type="text" name="thc" value={strainData.thc} onChange={handleChange}></input>
               
             </div>
             <div className="form-group">

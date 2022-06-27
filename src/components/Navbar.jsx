@@ -14,7 +14,7 @@ function Navbar() {
             </ul>
             <div>
                 {/* <img className="image" src="https://c.tenor.com/YMbY9m9-Q6YAAAAC/amcs-amcs2020.gif" alt="Medicinal Healing"></img> */}
-                {/* <img className="image" src="https://c.tenor.com/YMbY9m9-Q6YAAAAC/amcs-amcs2020.gif" alt='medicinal flower'></img> */}
+                {/* <img className="image" src="./images/Pic1.001.jpeg" alt='medicinal flower'></img> */}
                
                 
             </div>

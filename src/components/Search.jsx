@@ -11,7 +11,7 @@ function Search({searchTerm, setSearchTerm, filteredStrainsArr}) {
 
     return (
         <div>
-            <label htmlFor="search">Wellness Check: </label>
+            <label htmlFor="search"> Wellness Check: </label>
       <input
         type="text"
         id="search"

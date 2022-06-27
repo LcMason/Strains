@@ -1,16 +1,20 @@
-/* body {
+ /* body {
   margin: 0;
+  max-width: 70%;
+  width: 70%;
+  
+
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
+}  */
 
-code {
+/* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-} */
+} */ */
 
 
 /* :root {
@@ -170,13 +174,12 @@ input:focus {
 
 
  
-  /* #navbar li{
-  color: white;
-}    */
+
 
 .linkStyles {
   display: inline-block;
   width: 5000px;
+  /* make width 100% to span the width of the project */ 
   padding: auto;
   margin: auto;
   background: seagreen;
@@ -198,39 +201,21 @@ a:hover {
   color:brown;
 }
 
-
 li {
   display: inline;
   padding: 8px;
 }
 
 .header {
-  background-color: white;
-  
+  background-color: white; 
 }
 
-image {
-  height: auto;
-  width: auto;
-  float: left;
-  padding-right: 2%;
-  margin: 0 auto;
-  padding: 10px 0;
-}
 
 .body {
   margin: 0;
   font: normal 16px Arial, Helvetica, sans-serif;
   line-height: 1.6em;
 }
-
-
-  
-/* .box-1 {
-  margin: 0;
-  font: normal 16px Arial, Helvetica, sans-serif;
-  font-style: none;
-} */
 
 .box-1 a{
   text-decoration: none; 
@@ -294,20 +279,10 @@ image {
   border: 1px solid #ccc;
   padding: 10px;
   box-sizing: border-box;
-
 }
 
-
-.logo-image{
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
-  /* overflow: hidden; */
-  margin-top: -6px;
-}
 
 .my-form {
-  /* padding: 20px; */
   padding: 20px;
 }
 .my-form .form-group {
@@ -342,4 +317,9 @@ image {
 .image {
   float: right;
   object-fit:cover;
+  height: auto;
+  max-height: 100px ;
+  max-width: 100px;
+  position: relative;
+  text-align: top; 
 }
