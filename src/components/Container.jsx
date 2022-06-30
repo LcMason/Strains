@@ -17,7 +17,7 @@ function Container() {
 
   return (
     <div>
-       <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} filteredStrainsArr={filteredStrainsArr} />
+       <Search setSearchTerm={setSearchTerm} />
        {filteredStrainsArr.map((strain) => <Card strain={strain} key={strain.id} />)} 
     </div>
   )

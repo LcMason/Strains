@@ -1,13 +1,7 @@
 import React from "react";
 
 
-function Search({searchTerm, setSearchTerm, filteredStrainsArr}) {
-
-
-
-
-
-
+function Search({setSearchTerm}) {
 
     return (
         <div>
@@ -16,8 +10,8 @@ function Search({searchTerm, setSearchTerm, filteredStrainsArr}) {
         type="text"
         id="search"
         placeholder="Search Diagnosis..."
-        onChange={(e) => setSearchTerm(e.target.value)}
-        //how is onChange there an onChange callback function with no onChange function written in Search componenet
+        onChange={(e) => setSearchTerm(e.target.value)} //anonymous function
+        
       />
         </div>
     )

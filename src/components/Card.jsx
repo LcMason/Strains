@@ -5,12 +5,9 @@ function Card({strain}) {
    
        const [isShowing, setIsShowing] = useState(false)
     
-
-      console.log(strain)
-
-      const handleToggleDetails = () => {
-        setIsShowing(!isShowing);
-      }
+        const handleToggleDetails = () => {
+          setIsShowing(!isShowing);
+        }
 
   return (
     <div className="card" onClick={handleToggleDetails}>

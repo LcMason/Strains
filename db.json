@@ -70,100 +70,12 @@
       "id": 6,
       "strain": "Amnesia Haze",
       "species": "sativa",
-      "image": "",
-      "manages": "",
-      "top_effect": "",
-      "flavor_and_aroma": "",
-      "THC": "",
-      "rating": ""
-    },
-    {
-      "id": 7,
-      "strain": "Arabian Gold",
-      "species": "sativa",
-      "images": "",
-      "manages": "",
-      "top_effect": "",
-      "flavor_and_aroma": "",
-      "THC": "",
-      "rating": ""
-    },
-    {
-      "id": 8,
-      "strain": "Arjan's Strawberry Haze",
-      "species": "sativa",
-      "images": "",
-      "manages": "",
-      "top_effect": "",
-      "flavor_and_aroma": "",
-      "THC": "",
-      "rating": ""
-    },
-    {
-      "id": 9,
-      "strain": "Asian Fantasy",
-      "species": "sativa",
-      "images": "",
-      "manages": "",
-      "top_effect": "",
-      "flavor_and_aroma": "",
-      "THC": "",
-      "rating": ""
-    },
-    {
-      "id": 10,
-      "strain": "Bay 11",
-      "species": "sativa",
-      "images": "",
-      "manages": "",
-      "top_effect": "",
-      "flavor_and_aroma": "",
-      "THC": "",
-      "rating": ""
-    },
-    {
-      "id": 11,
-      "strain": "Berkely",
-      "species": "sativa",
-      "images": "",
-      "manages": "",
-      "top_effect": "",
-      "flavor_and_aroma": "",
-      "THC": "",
-      "rating": ""
-    },
-    {
-      "id": 12,
-      "strain": "Black Diesel",
-      "species": "sativa",
-      "images": "",
-      "manages": "",
-      "top_effect": "",
-      "flavor_and_aroma": "",
-      "THC": "",
-      "rating": ""
-    },
-    {
-      "id": 13,
-      "strain": "Blue Bayou",
-      "species": "sativa",
-      "images": "",
-      "manages": "",
-      "top_effect": "",
-      "flavor_and_aroma": "",
-      "THC": "",
-      "rating": ""
-    },
-    {
-      "id": 14,
-      "strain": "Blue Satellite",
-      "species": "sativa",
-      "images": "",
-      "manages": "",
-      "top_effect": "",
-      "flavor_and_aroma": "",
-      "THC": "",
-      "rating": ""
+      "image": "https://images.leafly.com/flower-images/defaults/generic/strain-25.png?auto=compress,format&w=215&dpr=2",
+      "manages": "Multiple sclerosis, Muscle spasms",
+      "top_effect": "uplifting",
+      "flavor_and_aroma": "lemons & citrus",
+      "THC": "19%",
+      "rating": "4.2"
     }
   ]
 }
