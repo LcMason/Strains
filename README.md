@@ -12,7 +12,7 @@ Creating my own REST API with JSON Server that includes an array of objects, I w
 *Search Diagnoses that will populate all strains that can manage searched diagnosis.
 *Hover over Routes (mouse over)
 
-## 👨‍💻 TECH STACK 👨🏾‍💻
+## 👨🏾‍💻 TECH STACK
 - React.js
 - [db.json ](https://github.com/Dane-Dawson/json-server-collection/blob/main/marijuana-strains/db.json)
 - JSON server
