@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 
 function Form() {
  
+    // const [strains, setStrains] = useState([]);
       const [strainData, setStrainData] = useState({
         id: "",
         name: "",
@@ -17,7 +18,6 @@ function Form() {
     
     const handleChange = (e) => {
       const updatedFormData = {...strainData , [e.target.name]: e.target.value}
-      console.log(updatedFormData)
       setStrainData(updatedFormData)
     }
     
@@ -29,7 +29,7 @@ function Form() {
       const placeholder = "https://images.leafly.com/flower-images/blue-dream.png?auto=compress,format&w=350&dpr=2"
       const image = strainData.image === "" ? placeholder : strainData.image
       const updatedStrainObj = {...strainData, image}
-      // setStrainData(updatedStrainObj)
+      
       fetch("http://localhost:3000/strains", {
         method: "POST",
         headers: {
@@ -88,7 +88,7 @@ function Form() {
             <div className="form-group">
               <label> Manges: </label>
               <input type="text" name="manages" placeholder="" value={strainData.manages} onChange={handleChange}></input>
-             {/* if strainData.mamges.length = 0 ? placeholder : strainData.manages */}
+            
             </div>
             <div className="form-group">
               <label> Effect: </label>

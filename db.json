@@ -76,6 +76,30 @@
       "flavor_and_aroma": "lemons & citrus",
       "THC": "19%",
       "rating": "4.2"
+    },
+    {
+      "id": 7,
+      "name": "Lionel Mason",
+      "strain": "sativa",
+      "species": "sativa",
+      "image": "https://images.leafly.com/flower-images/blue-dream.png?auto=compress,format&w=350&dpr=2",
+      "manages": "anxiety",
+      "top_effect": "energizing",
+      "flavor_and_aroma": "Vanilla",
+      "thc": "18",
+      "rating": "5"
+    },
+    {
+      "id": 8,
+      "name": "ABC",
+      "strain": "sativa",
+      "species": "sativa",
+      "image": "https://images.leafly.com/flower-images/blue-dream.png?auto=compress,format&w=350&dpr=2",
+      "manages": "anxiety",
+      "top_effect": "calm",
+      "flavor_and_aroma": "citrus",
+      "thc": "11",
+      "rating": "2"
     }
   ]
 }
