@@ -1,18 +1,13 @@
-import React, {useEffect, useState} from 'react'
+import React, {useState} from 'react'
 import Card from './Card';
 import Search from './Search'
 
-function Container() {
-    const [strains, setStrains] = useState([]);
+function Container({strains}) {
+   
     const [searchTerm, setSearchTerm] = useState("")
 
 
-    useEffect(() => {
-      fetch("http://localhost:3000/strains")
-        .then((r) => r.json())
-        .then((strains) => setStrains(strains));
-    }, []);
-  
+
       const filteredStrainsArr = strains.filter((strain) => strain.manages.toLowerCase().includes(searchTerm.toLowerCase()))
 
   return (

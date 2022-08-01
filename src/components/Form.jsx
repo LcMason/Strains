@@ -1,8 +1,7 @@
 import React, {useState} from 'react' 
 
-function Form() {
+function Form({setStrains, strains}) {
  
-    // const [strains, setStrains] = useState([]);
       const [strainData, setStrainData] = useState({
         id: "",
         name: "",
@@ -21,9 +20,6 @@ function Form() {
       setStrainData(updatedFormData)
     }
     
-    
-    const [strains, setStrains] = useState([]);
-
     const handleSubmit =(e) => {
       e.preventDefault();
       const placeholder = "https://images.leafly.com/flower-images/blue-dream.png?auto=compress,format&w=350&dpr=2"

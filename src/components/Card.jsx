@@ -10,10 +10,14 @@ function Card({strain}) {
         }
 
   return (
+
     <div className="card" onClick={handleToggleDetails}>
             <h2>{strain.strain}</h2>
             <h3>Species - {strain.species}</h3>
             <img src={strain.image} alt={strain.name} className="cannabis-avatar" />
+            <div className="button" > 
+              <button> More Info. </button>
+            </div>
             {isShowing ? (
               <div>
                 <p>Manages - {strain.manages}</p>
